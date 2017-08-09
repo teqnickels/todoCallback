@@ -1,0 +1,29 @@
+{
+  "name": "command_line_todo",
+  "version": "1.0.0",
+  "description": "command line todo list",
+  "main": "tasks.js",
+  "scripts": {
+    "build": "babel src -d lib",
+    "test": "mocha --compilers js:babel-register tests.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/teqnickels/commandLineTodo.git"
+  },
+  "author": "debrena mcewen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/teqnickels/commandLineTodo/issues"
+  },
+  "homepage": "https://github.com/teqnickels/commandLineTodo#readme",
+  "dependencies": {
+    "babel": "^6.23.0",
+    "chai": "^4.1.1",
+    "chai-change": "^2.1.2",
+    "mocha": "^3.5.0",
+    "babel-cli": "^6.18.0",
+    "babel-preset-env": "^1.1.4",
+    "babel-register": "^6.18.0"
+  }
+}
