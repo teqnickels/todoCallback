@@ -10,6 +10,11 @@ function commands ( command ) {
   case 'add':
     add( taskName, taskDescription)
     break;
+
+  case 'list':
+    list()
+    break;
+
   default:
     console.log('Invalid Entry');
   }
