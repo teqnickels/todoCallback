@@ -6,8 +6,10 @@ function list() {
   finalArr = []
   for (var i = 0; i < storage.length; i++) {
     var keys = Object.keys(storage[i])
-    var todos = storage[i][keys]
-    todoArr.push(todos)
+    if (storage[i].complete == false) {
+      var todos = storage[i].task
+      todoArr.push(todos)
+    }
   }
   todoArr.forEach(function (element, index) {
     todoObj = {}

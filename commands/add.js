@@ -5,7 +5,10 @@ const storage = require('../allTasks.json')
 function add(taskName) {
   var toDoList = {}
   var id = storage.length + 1
-  toDoList[id] = taskName
+
+  toDoList['id'] = id
+  toDoList['task'] = taskName
+  toDoList['complete'] = false
   toStore(toDoList)
 }
 
