@@ -7,7 +7,6 @@ function toStore( obj ) {
     var data = JSON.stringify( arrOfObj )
   fs.writeFileSync( './allTasks.json', data )
   console.log(`You have ${arrOfObj.length++} tasks`)
-
 }
 
 module.exports = toStore
