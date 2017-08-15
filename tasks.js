@@ -17,7 +17,7 @@ function commands ( command ) {
       break;
 
   case 'complete':
-      complete( 'complete', taskName );
+      complete( taskName );
       break;
   default:
     console.log('Invalid Entry');
