@@ -5,6 +5,7 @@ import allTasks from './allTasks.json'
 import tasks from './tasks.js'
 import add from './commands/add.js'
 import complete from './commands/complete.js'
+import deleteTask from './commands/delete.js'
 
 chai.use(chaiChange);
 
@@ -18,7 +19,7 @@ describe('tasks', () => {
   context( 'add()', () => {
     it( 'add a task object to allTasks',() => {
       add('test1')
-      setTimeout( function () {
+      setTimeout( function() {
           expect( allTasks.length ).to.equal( 1 );
       }, 100 );
     })
@@ -28,6 +29,15 @@ describe('tasks', () => {
     it('sets a tasks complete property to true',() => {
       complete(1)
       expect(allTasks[0].complete).to.equal(true)
+    })
+  })
+
+  context('deleteTask()', () => {
+    it('removes a task from the allTasks.json', () => {
+      deleteTask(1)
+      setTimeout(function() {
+        expect(allTasks.length).to.equal(0)
+      }, 100)
     })
   })
 
