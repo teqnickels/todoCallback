@@ -6,6 +6,8 @@ import tasks from './tasks.js'
 import add from './commands/add.js'
 import complete from './commands/complete.js'
 import deleteTask from './commands/delete.js'
+import list from './commands/list.js'
+
 
 chai.use(chaiChange);
 
@@ -40,9 +42,4 @@ describe('tasks', () => {
       }, 100)
     })
   })
-
-
-
-
-
 })

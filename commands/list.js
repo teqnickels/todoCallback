@@ -2,8 +2,8 @@ const storage = require('../allTasks.json')
 require('console.table');
 
 function list() {
-  todoArr = []
-  finalArr = []
+  var todoArr = []
+  var finalArr = []
   for (var i = 0; i < storage.length; i++) {
     var keys = Object.keys(storage[i])
     if (storage[i].complete == false) {
@@ -12,7 +12,7 @@ function list() {
     }
   }
   todoArr.forEach(function (element, index) {
-    todoObj = {}
+    var todoObj = {}
     todoObj.id = index + 1
     todoObj.description = element
     finalArr.push( todoObj )

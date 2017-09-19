@@ -1,6 +1,6 @@
 #!/user/bin/env node
 const command = process.argv[2]
-const taskName = process.argv.slice( [3] ).join().replace(/\,/g, ' ')
+const taskName = process.argv.slice( [3]).join().replace(/\,/g, ' ' )
 const add = require( './commands/add' )
 const list = require( './commands/list' )
 const complete = require( './commands/complete' )
@@ -30,5 +30,6 @@ function commands ( command ) {
   }
 }
 
+//  add(stuff)
 
 commands(command)
