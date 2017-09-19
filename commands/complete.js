@@ -12,7 +12,7 @@ function complete(taskName) {
     }
   }
   var update = JSON.stringify( updateObj )
-  fs.writeFileSync( './allTasks.json', update )
+  fs.writeFile( './allTasks.json', update )
   console.log(`You have ${storage.length++} tasks`)
 }
 module.exports = complete;
