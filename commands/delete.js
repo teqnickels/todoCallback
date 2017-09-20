@@ -1,6 +1,6 @@
 #!/user/bin/env node
 const toStore = require('./toStore')
-const storage = require('../allTasks.json')
+// const storage = require('../allTasks.json')
 const fs = require('fs')
 
 
