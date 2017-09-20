@@ -9,7 +9,11 @@ const toStore = {
     console.log('Storage Exists!')
   },
   createList: function(list) {
-    console.log('There is no Storage')
+    list = JSON.stringify(list)
+    fs.writeFile('/Users/debrenamcewen/guild/todoCallback/allTasks.json', list, (err) => {
+      if (err) throw err;
+      console.log('The file has been saved!');
+    });
   }
 }
 

@@ -8,9 +8,9 @@ function add(taskName) {
   var task = {}
   var id = toDoList.length + 1
 
-  toDoList['id'] = id
-  toDoList['task'] = taskName
-  toDoList['complete'] = false
+  task['id'] = id
+  task['task'] = taskName
+  task['complete'] = false
   toDoList.push(task)
   isStorage(toDoList)
 }
