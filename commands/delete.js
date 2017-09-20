@@ -8,20 +8,8 @@ function deleteTask( task ) {
   for ( var i = 0; i < storage.length-1; i++ ) {
     if( storage[i].id == task ) {
       var deleteObj = storage
-      // console.log("storage", storage)
-      // console.log("deleteObj", deleteObj)
-
-
-      console.log('The matching index ====>', storage[i])
       deleteObj.splice( i, 1 )
-
-      //this is where we go wrong
-      console.log('after the splice ====>',deleteObj)
       var update = JSON.stringify( deleteObj )
-
-
-
-      console.log('new object stringified ===>',update)
       fs.writeFile( './allTasks.json', update )
       console.log(`You have ${storage.length++} tasks`)
     }
