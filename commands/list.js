@@ -1,4 +1,4 @@
-const storage = require('../allTasks.json')
+// const storage = require('../allTasks.json')
 require('console.table');
 
 function list() {

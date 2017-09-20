@@ -1,13 +1,17 @@
-const storage = require('../allTasks.json')
 var fs = require('fs')
 var complete = require('./complete')
 
-function toStore(obj) {
-  var arrOfObj = (storage.length == 0 ? [] : storage)
-  arrOfObj.push(obj)
-  var data = JSON.stringify(arrOfObj)
-  fs.writeFileSync('./allTasks.json', data)
-  console.log(`You have ${arrOfObj.length++} tasks`)
+
+
+
+const toStore = {
+  addList: function(list) {
+    console.log('Storage Exists!')
+  },
+  createList: function(list) {
+    console.log('There is no Storage')
+  }
 }
 
-module.exports = toStore
+
+module.exports = {toStore}
