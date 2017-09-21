@@ -11,6 +11,8 @@ function add(taskName) {
   task['id'] = id
   task['task'] = taskName
   task['complete'] = false
+
+  
   toDoList.push(task)
   isStorage(toDoList)
 }
