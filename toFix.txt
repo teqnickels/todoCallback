@@ -1,3 +1,1 @@
-1. console log counter broken 
 2. id counter is broken 
-3. json file not updating 

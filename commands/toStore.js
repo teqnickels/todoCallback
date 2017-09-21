@@ -9,13 +9,16 @@ const toStore = {
     var task = list.pop()
     var store = require('../allTasks.json')
     store.push(task)
-    store = JSON.stringify(store)
-    fs.writeFile('/Users/debrenamcewen/guild/todoCallback/allTasks.json', store, (err) => {
+    var counter = store.length
+    store[store.length-1]['id'] = counter
+    var storeString = JSON.stringify(store)
+    fs.writeFile('/Users/debrenamcewen/guild/todoCallback/allTasks.json', storeString, (err) => {
       if (err) throw err;
       console.log(`you have ${store.length} tasks`)
     })
   },
   createList: function(list) {
+    list[0]['id'] = 1
     list = JSON.stringify(list)
     fs.writeFile('/Users/debrenamcewen/guild/todoCallback/allTasks.json', list, (err) => {
       if (err) throw err;
