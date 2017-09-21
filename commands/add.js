@@ -6,16 +6,15 @@ var fs = require('fs')
 function add(taskName) {
   var toDoList = []
   var task = {}
-  var id = toDoList.length + 1
 
-  task['id'] = id
+  // task['id'] = id
   task['task'] = taskName
   task['complete'] = false
-
   
   toDoList.push(task)
   isStorage(toDoList)
 }
+
 
 function isStorage(list) {
   try {
