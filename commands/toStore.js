@@ -24,9 +24,10 @@ const toStore = {
       if (err) throw err;
       var store = require('../allTasks.json')
       console.log(`you have ${store.length} tasks`)
-    });
+    })
   }
 }
+
 
 
 module.exports = {toStore}
