@@ -1,9 +1,6 @@
 var fs = require('fs')
 var complete = require('./complete')
 
-
-
-
 const toStore = {
   addList: function(list) {
     var task = list.pop()
