@@ -6,30 +6,32 @@ const list = require( './commands/list' )
 const complete = require( './commands/complete' )
 const deleteTask = require( './commands/delete' )
 
-
+// I aligned my code up so its nice and even
 function commands ( command ) {
   switch ( command ) {
-  case 'add':
-    add( taskName  )
-    break;
+    case 'add':
+      add( taskName  )
+      break;
 
-  case 'list':
+    case 'list':
       list();
       break;
 
-  case 'complete':
+    case 'complete':
       complete( taskName );
       break;
 
-  case 'delete':
+    case 'delete':
       deleteTask( taskName );
       break;
 
-  default:
-    console.log( 'Invalid Entry' );
+    default:
+      console.log( 'Invalid Entry' );
   }
 }
 
+// not sure what this is for, but dont leave anything extra in you code.
 //  add(stuff)
 
+// Good job!
 commands(command)

@@ -1,3 +1,4 @@
+// if you know it won't change make the 'var' a 'const'
 var chai = require('chai');
 import { expect } from 'chai'
 import chaiChange from 'chai-change'
@@ -11,6 +12,9 @@ import list from './commands/list.js'
 
 chai.use(chaiChange);
 
+// I like how you wrote out your test all nice and neat.
+// I like how you used the tools that you know to get the job done
+// But mocha has built in ways to get async jobs done.
 describe('tasks', () => {
   'use strict'
 

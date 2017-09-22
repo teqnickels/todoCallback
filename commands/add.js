@@ -1,8 +1,12 @@
 #!/user/bin/env node
 const {toStore} = require('./toStore')
 
+// fs won't be reassigned use a const please.
 var fs = require('fs')
 
+// Nice I like the seperation of concerns
+// By splitting up the functionality into 2 functions.
+// That promotes readabilty
 function add(taskName) {
   var toDoList = []
   var task = {}
